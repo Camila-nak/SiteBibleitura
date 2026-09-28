@@ -1,0 +1,360 @@
+*{ 
+    box-sizing:border-box;
+    margin:0
+}
+:root{
+    --suave:rgba(255,255,255,.65);
+    --vidro:rgba(255,255,255,.08);
+    --borda:rgba(255,255,255,.18);
+    --grad:linear-gradient(90deg,#b44dff,#f0389f)
+}
+body{
+    min-height:100vh;
+    color:#fff;
+    font:15px/1.4 Inter,"Segoe UI",system-ui,sans-serif;
+    background:linear-gradient(135deg,#5a1e9c 0%,#2a2a86 45%,#1f3c95 65%,#7a2c6a 100%) fixed
+}
+a{
+    color:inherit;
+    text-decoration:none
+}
+a:focus-visible,input:focus-visible{
+    outline:2px solid #fff;
+    outline-offset:2px
+}
+ul{
+    list-style:none;
+    padding:0
+}
+svg{
+    width:1em;
+    height:1em;
+    fill:none;
+    stroke:currentColor;
+    stroke-width:2;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    flex:none
+}
+.sprite{
+    position:absolute;
+    width:0;
+    height:0
+}
+ 
+/* ---------- Topo ---------- */
+.topo{
+    position:sticky;
+    top:0;
+    z-index:5;
+    display:flex;
+    align-items:center;
+    gap:24px;
+    padding:12px 24px;
+    background:rgba(15,10,50,.35);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--borda)
+}
+.marca{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-weight:700;
+    font-size:20px
+}
+.logo{
+    display:grid;
+    place-items:center;
+    width:40px;
+    height:40px;
+    border-radius:10px;
+    background:var(--grad);
+    font-size:22px
+}
+.busca{
+    flex:1;
+    max-width:574px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    height:42px;
+    padding:0 14px;
+    border-radius:10px;
+    background:rgba(255,255,255,.1);
+    border:1px solid var(--borda);
+    color:var(--suave);
+    font-size:18px
+}
+.busca input{
+    flex:1;
+    min-width:0;
+    background:none;
+    border:0;
+    outline:0;
+    color:#fff;
+    font:inherit;
+    font-size:15px
+}
+.busca input::placeholder{
+    color:var(--suave)
+}
+.acoes{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-left:auto
+}
+.sino{
+    position:relative;
+    padding:8px;
+    font-size:20px
+}
+.sino b{
+    position:absolute;
+    top:0;
+    right:0;
+    display:grid;
+    place-items:center;
+    min-width:16px;
+    height:16px;
+    padding:0 4px;
+    border-radius:8px;
+    background:#ec4899;
+    font-size:10px
+}
+.perfil{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    padding:10px 16px;
+    border-radius:10px;
+    background:rgba(255,255,255,.12);
+    border:1px solid var(--borda);
+    font-weight:600}
+ 
+/* ---------- Estrutura ---------- */
+.layout{
+    display:grid;
+    grid-template-columns:minmax(0,1fr) 315px;
+    gap:32px;
+    max-width:1240px;
+    margin:0 auto;
+    padding:32px 24px;
+    counter-reset:topicos
+}
+.linha{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:24px
+}
+h1{
+    font-size:24px
+}
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    padding:11px 18px;
+    border-radius:10px;
+    background:var(--grad);
+    font-weight:600;
+    box-shadow:0 6px 20px rgba(240,56,159,.3)
+}
+.card{
+    background:var(--vidro);
+    border:1px solid var(--borda);
+    border-radius:16px;
+    backdrop-filter:blur(14px);
+    box-shadow:0 8px 30px rgba(0,0,0,.15)
+}
+.lista{
+    display:grid;
+    gap:16px
+}
+ 
+/* ---------- Tópico ---------- */
+.topico{
+    display:flex;
+    gap:16px;
+    padding:24px;
+    counter-increment:topicos;
+    counter-reset:coms
+}
+.avatar{
+    display:grid;
+    place-items:center;
+    flex:none;
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#8b5cf6,#6366f1);
+    font-weight:700;
+    font-size:18px
+}
+.corpo{
+    flex:1;
+    min-width:0;
+    display:flex;
+    flex-direction:column;
+    gap:10px
+}
+.topico h2{
+    font-size:18px
+}
+.meta{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    gap:10px;
+    color:var(--suave);
+    font-size:13px
+}
+.meta span{
+    display:inline-flex;
+    align-items:center;
+    gap:6px
+}
+.pill{
+    padding:3px 12px;
+    border-radius:999px;
+    background:rgba(168,85,247,.45);
+    color:#fff
+}
+.stats{
+    order:2;
+    display:flex;
+    gap:20px;
+    color:var(--suave);
+    font-weight:600
+}
+.stats span{
+    display:inline-flex;
+    align-items:center;
+    gap:8px
+}
+.n-com::before{
+    content:counter(coms)
+} 
+.comentarios{
+    order:3
+}
+.comentario{
+    display:flex;
+    gap:10px;
+    margin-top:12px;
+    padding-top:12px;
+    border-top:1px solid var(--borda);
+    counter-increment:coms;
+    font-size:14px
+}
+.comentario .avatar{
+    width:32px;
+    height:32px;
+    font-size:13px
+}
+.comentario small{
+    color:var(--suave);
+    margin-left:6px
+}
+.comentario p{
+    color:rgba(255,255,255,.85)
+}
+ 
+/* ---------- Estados vazios (somem sozinhos quando existir conteúdo) ---------- */
+.vazio{
+    display:grid;
+    justify-items:center;
+    gap:10px;
+    padding:56px 24px;
+    text-align:center;
+    color:var(--suave);
+    border:1px dashed var(--borda);
+    border-radius:16px
+}
+.vazio svg{
+    font-size:36px;
+    color:#c084fc
+}
+.vazio h2{
+    font-size:18px;
+    color:#fff
+}
+.lista:has(.topico) .vazio{
+    display:none
+}
+.vazio-mini{
+    padding:14px 12px;
+    border-radius:10px;
+    background:rgba(255,255,255,.06);
+    color:var(--suave);
+    font-size:14px
+}
+.lateral:has(.item) .vazio-mini{
+    display:none
+}
+ 
+/* ---------- Coluna lateral ---------- */
+aside{
+    display:grid;
+    gap:24px;
+    align-content:start
+}
+aside .card{
+    padding:24px
+}
+aside h2{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:16px;
+    font-size:18px
+}
+aside h2 svg{
+    color:#c084fc
+}
+.dado{
+    display:flex;
+    justify-content:space-between;
+    padding:7px 0;
+    color:var(--suave)
+}
+.dado b{
+    color:#fff
+}
+.n-topicos::before{
+    content:counter(topicos)
+} 
+aside .btn{
+    display:flex;
+    margin-top:14px
+}
+.lateral{
+    display:grid;
+    gap:8px
+}
+.item{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:14px 12px;
+    border-radius:10px;
+    background:rgba(255,255,255,.08);
+    font-weight:600;
+    font-size:14px
+}
+.item svg{
+    font-size:18px;
+    color:#c084fc
+}
+.item .avatar{
+    width:32px;
+    height:32px;
+    font-size:13px
+}
+.item span:last-child{
+    margin-left:auto;
+    color:var(--suave);
+    font-size:13px
+}
