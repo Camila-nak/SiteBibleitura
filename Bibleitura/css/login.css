@@ -1,0 +1,211 @@
+/*Fonte*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap');
+
+/*cores da tela*/
+:root {
+    --fundo: #0d0820;
+    --painel: #150d2b;
+    --campo: #1a1233;
+    --borda: #2d2250;
+    --rosa: #e0609f;
+    --azul: #5b8def;
+    --lilas: #8e7bc4;
+    --texto: #f1ebff;
+    --serif: 'Playfair Display', Georgia, serif;
+    --sans: 'Inter', system-ui, sans-serif;
+}
+
+* { 
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0; 
+}
+
+ul { 
+    list-style: none; 
+}
+
+a { color: var(--rosa);
+    text-decoration: none; 
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+body {
+    background: var(--fundo);
+    color: var(--texto);
+    font: 14px/1.6 var(--sans);
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    min-height: 100vh;
+}
+
+/*Lado esquerdo*/
+main > aside:first-child {
+    display: flex;
+    flex-direction: column;
+    padding: 48px 56px;
+    background:
+        linear-gradient(180deg, transparent 20%, var(--fundo) 75%),
+        linear-gradient(135deg, #7a2a5c, #3a1d6e 55%, #1a0f3a);
+
+    > p:first-child {
+        font: 500 22px var(--serif);
+        letter-spacing: .18em;
+        text-transform: uppercase;
+    }
+
+    > p:nth-of-type(2) {
+        margin-top: auto;
+        font: 500 12px var(--serif);
+        letter-spacing: .2em;
+        text-transform: uppercase;
+        color: var(--rosa);
+    }
+
+    h2 {
+        margin: 16px 0 20px;
+        max-width: 480px;
+        font: italic 500 clamp(36px, 4.4vw, 56px)/1.15 var(--serif);
+    }
+
+    > p:nth-of-type(3) {
+        max-width: 420px;
+        color: var(--lilas);
+    }
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 36px;
+    }
+
+    ul::before {
+        content: "";
+        flex-basis: 100%;
+        max-width: 120px;
+        height: 1px;
+        margin-bottom: 14px;
+        background: linear-gradient(90deg, var(--rosa), var(--azul));
+    }
+
+    li {
+        border: 1px solid #4a2f8a;
+        border-radius: 3px;
+        padding: 8px 14px;
+        font: 11px var(--serif);
+        letter-spacing: .12em;
+        text-transform: uppercase;
+        color: #a98be8;
+    }
+}
+
+/*Lado direito*/
+main > aside:last-child {
+    display: flex;
+    flex-direction: column;
+    padding: 48px 56px 0;
+    background: var(--painel);
+    border-left: 1px solid var(--borda);
+
+    /* o espaço livre se divide em cima do título e embaixo do formulário,
+       deixando o bloco centralizado na altura da tela */
+    h1 {
+        margin-top: auto;
+        font: 700 32px/1.2 var(--serif);
+    }
+
+    h1 + p { margin: 6px 0 32px; font-size: 13px; color: var(--lilas); }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        margin-bottom: auto;
+    }
+
+    form > label {
+        margin-top: 14px;
+        font: 11px var(--serif);
+        letter-spacing: .14em;
+        text-transform: uppercase;
+        color: var(--lilas);
+    }
+
+    input[type="email"],
+    input[type="password"] {
+        width: 100%;
+        padding: 14px 16px;
+        background: var(--campo);
+        border: 1px solid var(--borda);
+        border-radius: 4px;
+        color: var(--texto);
+        font: inherit;
+    }
+
+    input::placeholder { color: #6f5f9a; }
+
+    input:focus {
+        outline: none;
+        border-color: var(--rosa);
+    }
+
+    form > div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        margin-top: 14px;
+        font-size: 12px;
+
+        label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--lilas);
+        }
+    }
+
+    input[type="checkbox"] {
+        width: 18px;
+        height: 18px;
+        accent-color: var(--rosa);
+    }
+
+    button {
+        margin-top: 20px;
+        padding: 16px;
+        border: 0;
+        border-radius: 4px;
+        background: linear-gradient(90deg, var(--rosa), var(--azul));
+        color: #fff;
+        font: 700 14px var(--serif);
+        letter-spacing: .14em;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+
+    button:hover { filter: brightness(1.1); }
+
+    footer {
+        padding: 20px 0;
+        border-top: 1px solid var(--borda);
+        font: 11px var(--serif);
+        letter-spacing: .12em;
+        text-transform: uppercase;
+        color: #4d3f78;
+    }
+}
+
+/*  Celular*/
+@media (max-width: 900px) {
+    main { grid-template-columns: 1fr; }
+    main > aside:first-child { min-height: 420px; padding: 32px 24px; }
+    main > aside:last-child { padding: 32px 24px 0; }
+}

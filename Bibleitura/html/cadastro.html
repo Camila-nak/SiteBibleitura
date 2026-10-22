@@ -7,6 +7,67 @@
     <title>Cadastre-se - Wikileitura</title>
 </head>
 <body>
-    
+    <main>
+        <!--Lado esquerdo-->
+        <aside>
+            <p>Wikileitura</p>
+
+            <p>Literatura brasileira</p>
+            <h2>Descubra as vozes que moldaram o <em>Brasil</em></h2>
+            <p>De Machado de Assis a Conceição Evaristo — reúna, anote e compartilhe suas leituras com uma comunidade apaixonada por livros brasileiros.</p>
+
+            <ul>
+                <li>Machado de Assis</li>
+                <li>Clarice Lispector</li>
+                <li>Jorge Amado</li>
+            </ul>
+        </aside>
+
+        <!--Lado direito e cadastro-->
+        <aside>
+            <h1>Criar sua conta</h1>
+            <p>Já tem uma conta? <a href="/Bibleitura/html/login.html">Entrar</a></p>
+
+            <form method="post">
+                <label for="nome">Como quer ser chamado?</label>
+                <input type="text" id="nome" name="nome" placeholder="Wikileitura da Silva" autocomplete="name" required>
+
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="Wikileitura@exemplo.com.br" autocomplete="email" required>
+
+                <label for="nascimento">Nascimento</label>
+                <input type="date" id="nascimento" name="nascimento" required>
+
+                <label for="estado">Estado</label>
+                <select id="estado" name="estado" required>
+                    <option value="">UF</option>
+                    <option>AC</option><option>AL</option><option>AP</option><option>AM</option>
+                    <option>BA</option><option>CE</option><option>DF</option><option>ES</option>
+                    <option>GO</option><option>MA</option><option>MT</option><option>MS</option>
+                    <option>MG</option><option>PA</option><option>PB</option><option>PR</option>
+                    <option>PE</option><option>PI</option><option>RJ</option><option>RN</option>
+                    <option>RS</option><option>RO</option><option>RR</option><option>SC</option>
+                    <option>SP</option><option>SE</option><option>TO</option>
+                </select>
+
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="senha" placeholder="Mínimo 8 caracteres" minlength="8" autocomplete="new-password" required>
+
+                <label for="confirmar">Confirmar senha</label>
+                <input type="password" id="confirmar" name="confirmar" placeholder="Repita a senha" minlength="8" autocomplete="new-password" required>
+
+                <label>
+                    <input type="checkbox" name="termos" required>
+                    Concordo com os <a href="#">Termos de Uso</a> e <a href="#">Política de Privacidade</a> da Bibleitura.
+                </label>
+
+                <button type="submit">Continuar &rsaquo;</button>
+            </form>
+
+            <footer>
+                <p>© 2026 Bibleitura · Literatura brasileira</p>
+            </footer>
+        </aside>
+    </main>
 </body>
 </html>

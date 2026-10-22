@@ -3,10 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="sylesheet" href="/Bibleitura/css/login.css">
+    <link rel="stylesheet" href="/Bibleitura/css/login.css">
     <title>Login - Wikileitura</title>
 </head>
 <body>
-    
+    <main>
+        <!--Lado esquerdo-->
+        <aside>
+            <p>Wikileitura</p>
+
+            <p>Bem-vindo de volta</p>
+            <h2>Sua estante continua <em>de onde parou</em></h2>
+            <p>Retome suas leituras, reveja suas anotações e descubra o que a comunidade anda lendo.</p>
+
+            <ul>
+                <li>Machado de Assis</li>
+                <li>Clarice Lispector</li>
+                <li>Jorge Amado</li>
+            </ul>
+        </aside>
+
+        <!--Lado direito e login-->
+        <aside>
+            <h1>Entrar</h1>
+            <p>Ainda não tem conta? <a href="/Bibleitura/html/cadastro.html">Cadastre-se</a></p>
+
+            <form method="post">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="Wikileitura@exemplo.com.br" required>
+
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="senha" placeholder="Sua senha" required>
+
+                <div>
+                    <label>
+                        <input type="checkbox" name="lembrar">
+                        Manter conectado
+                    </label>
+                    <!--tenho que criar-->
+                    <a href="#">Esqueci minha senha</a>
+                </div>
+
+                <button type="submit">Entrar &rsaquo;</button>
+            </form>
+
+            <footer>
+                <p>© 2026 Wikileitura · Literatura brasileira</p>
+            </footer>
+        </aside>
+    </main>
 </body>
 </html>
