@@ -16,7 +16,7 @@
                 <li><a href="/Bibleitura/html/explorar.html">Explorar</a></li>
                 <li><a href="/Bibleitura/html/qmsomos.html">Quem somos</a></li>
                 <li><a href="/Bibleitura/html/novidades.html">Novidades</a></li>
-                <li><a href="/Bibleitura/html/acessibilidade.html">Acessibilidade</a></li>
+                <li><a href="/Bibleitura/html/contato.html">Fale conosco</a></li>
                 <li>
                     <details>
                         <summary>Saiba mais</summary>
@@ -24,7 +24,7 @@
                             <li><a href="/Bibleitura/html/minhaestante.html">Minha estante</a></li>
                             <li><a href="/Bibleitura/html/lendoagora.html">Lendo agora</a></li>
                             <li><a href="/Bibleitura/html/historico.html">Histórico</a></li>
-                            <li><a href="/Bibleitura/html/contato.html">Fale conosco</a></li>
+                            <li><a href="/Bibleitura/html/clubeleitura.html">Clude de leitura</a></li>
                         </ul>
                     </details>
                 </li>
@@ -39,7 +39,67 @@
 
     <!--corpo do site-->
     <main>
+        <section>
+            <p>Descubra sua próxima leitura</p>
+            <h1>Milhares de histórias esperam por você.</h1>
+            <p>Explore novos autores, clássicos brasileiros e os livros mais queridos pela nossa comunidade.</p>
+            <form role="search">
+                <input type="search" name="busca" placeholder="Busque por título ou autor..." aria-label="Buscar">
+                <button type="submit">Buscar</button>
+            </form>
+        </section>
 
+        <!--Seleção da semana-->
+        <section>
+            <div>
+                <p>Seleção da semana</p>
+                <h2>Livros para ler sem pressa</h2>
+                <p>Uma curadoria de histórias contemplativas para desacelerar e aproveitar cada página.</p>
+                <a href="#generos">Ver seleção</a>
+            </div>
+            <figure>
+                <img src="/Bibleitura/imgs/livro.jpg" alt="Pessoa-selecionando um livro de uma prateleira.">
+                <p><small>Pessoa-selecionando um livro de uma prateleira.</small></p>
+            </figure>
+        </section>
+
+        <!--Acervo-->
+        <section>
+            <header>
+                <div>
+                    <p>Nosso acervo</p>
+                    <h2>Explore os livros</h2>
+                </div>
+                <button type="button">Filtros</button>
+            </header>
+
+            <nav id="generos">
+                <ul>
+                    <li><a href="#" aria-current="page">Todos</a></li>
+                    <li><a href="#">Romance</a></li>
+                    <li><a href="#">Contos</a></li>
+                    <li><a href="#">Clássicos</a></li>
+                    <li><a href="#">Biografias</a></li>
+                    <li><a href="#">Ensaios</a></li>
+                    <li><a href="#">Poesia</a></li>
+                </ul>
+            </nav>
+
+            <ul>
+                <li>
+                    <figure>
+                        <p>Gênero</p>
+                        <button type="button" aria-label="Favoritar" aria-pressed="false"></button>
+                        <figcaption>
+                            <strong>Nome livro</strong>
+                            <small>Nome autor</small>
+                        </figcaption>
+                    </figure>
+                    <h3><a href="#">Nome livro</a></h3>
+                    <!--Link para o livro-->
+                </li>
+            </ul>
+        </section>
     </main>
 
     <!--rodapé-->

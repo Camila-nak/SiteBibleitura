@@ -16,7 +16,7 @@
                 <li><a href="/Bibleitura/html/explorar.html">Explorar</a></li>
                 <li><a href="/Bibleitura/html/qmsomos.html">Quem somos</a></li>
                 <li><a href="/Bibleitura/html/novidades.html">Novidades</a></li>
-                <li><a href="/Bibleitura/html/acessibilidade.html">Acessibilidade</a></li>
+                <li><a href="/Bibleitura/html/contato.html">Fale conosco</a></li>
                 <li>
                     <details>
                         <summary>Saiba mais</summary>
@@ -24,7 +24,7 @@
                             <li><a href="/Bibleitura/html/minhaestante.html">Minha estante</a></li>
                             <li><a href="/Bibleitura/html/lendoagora.html">Lendo agora</a></li>
                             <li><a href="/Bibleitura/html/historico.html">Histórico</a></li>
-                            <li><a href="/Bibleitura/html/contato.html">Fale conosco</a></li>
+                            <li><a href="/Bibleitura/html/clubeleitura.html">Clude de leitura</a></li>
                         </ul>
                     </details>
                 </li>
@@ -39,7 +39,52 @@
 
     <!--corpo do site-->
     <main>
+        <section>
+            <p>Estamos aqui para ajudar</p>
+            <h1>Vamos conversar?</h1>
+            <p>Envie sua dúvida, sugestão ou conte como podemos melhorar sua experiência no Wikileitura.</p>
+        </section>
 
+        <section>
+            <form method="post">
+                <p>Formulário de contato</p>
+                <h2>Como podemos ajudar?</h2>
+
+                <label>Nome <input type="text" name="nome" placeholder="Como podemos te chamar?" autocomplete="name" required></label>
+
+                <label> E-mail <input type="email" name="email" placeholder="voce@exemplo.com" autocomplete="email" required></label>
+
+                <label>
+                    Assunto
+                    <select name="assunto" required>
+                        <option value="">Selecione um assunto</option>
+                        <option>Dúvida</option>
+                        <option>Sugestão</option>
+                        <option>Problema técnico</option>
+                        <option>Clube de leitura</option>
+                        <option>Parcerias</option>
+                        <option>Outro</option>
+                    </select>
+                </label>
+
+                <label>Mensagem<textarea name="mensagem" rows="6" placeholder="Conte para a gente com o máximo de detalhes..." required></textarea></label>
+                <button type="submit">Enviar mensagem</button>
+                <p>Ao enviar, você concorda com o uso dos dados apenas para responder a esta solicitação.</p>
+            </form>
+
+            <aside>
+                <article>
+                    <h3>Prefere enviar um e-mail?</h3>
+                    <p>Nossa equipe também atende diretamente por este canal.</p>
+                    <a href="mailto:contato@wikileitura.com.br">contato@wikileitura.com.br</a>
+                </article>
+
+                <article>
+                    <h3>Horário de atendimento</h3>
+                    <p>De segunda a sexta, das 9h às 18h.<br>Respondemos em até 5 dias úteis.</p>
+                </article>
+            </aside>
+        </section>
     </main>
 
     <!--rodapé-->

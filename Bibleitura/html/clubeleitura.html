@@ -16,7 +16,7 @@
                 <li><a href="/Bibleitura/html/explorar.html">Explorar</a></li>
                 <li><a href="/Bibleitura/html/qmsomos.html">Quem somos</a></li>
                 <li><a href="/Bibleitura/html/novidades.html">Novidades</a></li>
-                <li><a href="/Bibleitura/html/acessibilidade.html">Acessibilidade</a></li>
+                <li><a href="/Bibleitura/html/contato.html">Fale conosco</a></li>
                 <li>
                     <details>
                         <summary>Saiba mais</summary>
@@ -24,7 +24,7 @@
                             <li><a href="/Bibleitura/html/minhaestante.html">Minha estante</a></li>
                             <li><a href="/Bibleitura/html/lendoagora.html">Lendo agora</a></li>
                             <li><a href="/Bibleitura/html/historico.html">Histórico</a></li>
-                            <li><a href="/Bibleitura/html/contato.html">Fale conosco</a></li>
+                            <li><a href="/Bibleitura/html/clubeleitura.html">Clude de leitura</a></li>
                         </ul>
                     </details>
                 </li>
@@ -39,7 +39,108 @@
 
     <!--corpo do site-->
     <main>
+        <section>
+            <header>
+                <div>
+                    <p>Clube de leitura</p>
+                    <h1>Wikiclub</h1>
+                    <p>Gosta de boa literatura e quer descobrir o melhor do Brasil?<br> Nosso clube de leitura virtual conecta pessoas e 
+                        obras nacionais em encontros leves e cheios de troca. Venha encontrar sua próxima leitura e novos amigos leitores!</p>
+                </div>  
+            </header>
 
+            <nav aria-label="Seções do clube">
+                <ul>
+                    <li><a href="#geral">Visão geral</a></li>
+                    <li><a href="#discussao" aria-current="page">Discussões</a></li>
+                    <li><a href="#calendario">Calendário</a></li>
+                    <li><a href="#membros">Membros</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <!--Leitura do mês-->
+        <section id="geral">
+            <article>
+                <figure>
+                    <small>Nome autor</small>
+                    <strong>Nome livro</strong>
+                </figure>
+
+                <div>
+                    <p>Leitura do mês</p>
+                    <h2>Nome livro</h2>
+                    <p>Nome autor</p>
+                    <p>Sinopse do livro.</p>
+                    <p><span>Seu progresso · página 0 de 0</span> <output>0%</output></p>
+                    <progress value="0" max="100">0%</progress>
+                    <a href="#">Continuar leitura</a>
+                </div>
+            </article>
+        </section>
+
+        <!--Próximo encontro e comunidade-->
+        <section>
+            <article id="calendario">
+                <header>
+                    <p>Próximo encontro</p>
+                    <h2>Conversa sobre o livro</h2>
+                </header>
+
+                <div>
+                    <time datetime="2026-01-01"><strong>00</strong><small>Mês</small></time>
+                    <div>
+                        <h3>Dia, às 00h</h3>
+                        <p>Local · 00 min</p>
+                    </div>
+                </div>
+
+                <a href="#">Confirmar presença</a>
+            </article>
+
+            <article id="membros">
+                <header>
+                    <p>Nossa comunidade</p>
+                    <h2>Leitores ativos</h2>
+                </header>
+
+                <!--Exemplo: um <li> por leitor, o último com o "+N" que sobrou-->
+                <ul>
+                    <li title="Nome completo">AB</li>
+                    <li>+0</li>
+                </ul>
+
+                <p>0 leitores participaram das discussões nesta semana.</p>
+                <a href="#">Ver todos os membros</a>
+            </article>
+        </section>
+
+        <!--Conversa do clube-->
+        <section id="discussao">
+            <article>
+                <header>
+                    <div>
+                        <h2>Conversa do clube</h2>
+                        <small>0 leitores online</small>
+                    </div>
+                    <a href="#" aria-label="Abrir conversa"></a>
+                </header>
+
+                <p>Hoje</p>
+
+                <!--Exemplo: cada mensagem do banco vira um <li> igual a este-->
+                <ul>
+                    <li>
+                        <abbr title="Nome completo">AB</abbr>
+                        <div>
+                            <strong>Nome do leitor</strong>
+                            <time datetime="2026-01-01T00:00">00:00</time>
+                            <p>Texto da mensagem.</p>
+                        </div>
+                    </li>
+                </ul>
+            </article>
+        </section>
     </main>
 
     <!--rodapé-->

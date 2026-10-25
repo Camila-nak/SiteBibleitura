@@ -16,7 +16,7 @@
                 <li><a href="/Bibleitura/html/explorar.html">Explorar</a></li>
                 <li><a href="/Bibleitura/html/qmsomos.html">Quem somos</a></li>
                 <li><a href="/Bibleitura/html/novidades.html">Novidades</a></li>
-                <li><a href="/Bibleitura/html/acessibilidade.html">Acessibilidade</a></li>
+                <li><a href="/Bibleitura/html/contato.html">Fale conosco</a></li>
                 <li>
                     <details>
                         <summary>Saiba mais</summary>
@@ -24,7 +24,7 @@
                             <li><a href="/Bibleitura/html/minhaestante.html">Minha estante</a></li>
                             <li><a href="/Bibleitura/html/lendoagora.html">Lendo agora</a></li>
                             <li><a href="/Bibleitura/html/historico.html">Histórico</a></li>
-                            <li><a href="/Bibleitura/html/contato.html">Fale conosco</a></li>
+                            <li><a href="/Bibleitura/html/clubeleitura.html">Clude de leitura</a></li>
                         </ul>
                     </details>
                 </li>
@@ -39,7 +39,86 @@
 
     <!--corpo do site-->
     <main>
+        <section>
+            <header>
+                <div>
+                    <p>Minha jornada</p>
+                    <h1>Histórico de leitura</h1>
+                    <p>Acompanhe os capítulos que você já viveu.</p>
+                </div>
 
+                <form method="get">
+                    <select name="ano" aria-label="Ano" onchange="this.form.submit()">
+                        <option>2026</option>
+                    </select>
+                    <a href="#" aria-label="Baixar histórico"></a>
+                </form>
+            </header>
+
+            <!--Os 4 números fixos: livros, tempo, páginas e avaliação-->
+            <ul>
+                <li><strong>0</strong><small>livros concluídos</small></li>
+                <li><strong>0h</strong><small>de tempo de leitura</small></li>
+                <li><strong>0</strong><small>páginas lidas</small></li>
+                <li><strong>0,0</strong><small>avaliação média</small></li>
+            </ul>
+        </section>
+
+        <!--Gráfico e meta-->
+        <section>
+            <article>
+                <header>
+                    <div>
+                        <p>Ritmo de leitura</p>
+                        <h2>Páginas por mês</h2>
+                    </div>
+                    <small>2026</small>
+                </header>
+
+                <!--Exemplo: um <li> por mês. A altura vai de 0% a 100%.
+                    O mês de maior leitura recebe aria-current="true" e fica amarelo-->
+                <ul>
+                    <li style="--altura: 50%"><small>Mês</small></li>
+                </ul>
+            </article>
+
+            <aside>
+                <p>Meta anual</p>
+                <h2>0 de 0 livros</h2>
+                <p>Você já completou 0% da sua meta.</p>
+                <progress value="0" max="100">0%</progress>
+                <p>Faltam 0 livros. Você consegue!</p>
+            </aside>
+        </section>
+
+        <!--Linha do tempo-->
+        <section>
+            <header>
+                <div>
+                    <p>Linha do tempo</p>
+                    <h2>Livros concluídos</h2>
+                </div>
+
+                <form role="search">
+                    <input type="search" name="busca" placeholder="Buscar no histórico" aria-label="Buscar no histórico">
+                </form>
+            </header>
+
+            <!--Exemplo: cada livro concluído vira um <li> igual a este-->
+            <ul>
+                <li>
+                    <a href="#">
+                        <figure><strong>Nome livro</strong></figure>
+                        <div>
+                            <h3>Nome livro <small>Gênero</small></h3>
+                            <p>Nome autor</p>
+                            <p><time datetime="2026-01-01">Concluído em 00 mês 0000</time> <small>0 páginas</small></p>
+                        </div>
+                        <data value="5" aria-label="Nota 5 de 5">★★★★★</data>
+                    </a>
+                </li>
+            </ul>
+        </section>
     </main>
 
     <!--rodapé-->

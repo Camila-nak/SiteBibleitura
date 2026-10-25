@@ -16,7 +16,7 @@
                 <li><a href="/Bibleitura/html/explorar.html">Explorar</a></li>
                 <li><a href="/Bibleitura/html/qmsomos.html">Quem somos</a></li>
                 <li><a href="/Bibleitura/html/novidades.html">Novidades</a></li>
-                <li><a href="/Bibleitura/html/acessibilidade.html">Acessibilidade</a></li>
+                <li><a href="/Bibleitura/html/contato.html">Fale conosco</a></li>
                 <li>
                     <details>
                         <summary>Saiba mais</summary>
@@ -24,7 +24,7 @@
                             <li><a href="/Bibleitura/html/minhaestante.html">Minha estante</a></li>
                             <li><a href="/Bibleitura/html/lendoagora.html">Lendo agora</a></li>
                             <li><a href="/Bibleitura/html/historico.html">Histórico</a></li>
-                            <li><a href="/Bibleitura/html/contato.html">Fale conosco</a></li>
+                            <li><a href="/Bibleitura/html/clubeleitura.html">Clude de leitura</a></li>
                         </ul>
                     </details>
                 </li>
@@ -39,7 +39,87 @@
 
     <!--corpo do site-->
     <main>
+        <section>
+            <p>Fique por dentro</p>
+            <h1>Novas histórias começam por aqui.</h1>
+            <p>Lançamentos, encontros e tudo que está movimentando a comunidade Wikileitura.</p>
+        </section>
 
+        <!--Novos no acervo-->
+        <section>
+            <header>
+                <div>
+                    <p>Acabaram de chegar</p>
+                    <h2>Novos no acervo</h2>
+                </div>
+                <a href="#">Ver todos</a>
+            </header>
+
+            <ul>
+                <li>
+                    <figure>
+                        <p>Gênero</p>
+                        <figcaption>
+                            <strong>Nome livro</strong>
+                            <small>Nome autor</small>
+                        </figcaption>
+                    </figure>
+                    <small>Novo</small>
+                </li>
+            </ul>
+        </section>
+
+        <!--Notícias da comunidade-->
+        <section>
+            <header>
+                <p>Acontece por aqui</p>
+                <h2>Notícias da comunidade</h2>
+            </header>
+
+            <!--Exemplo: cada notícia do banco vira um <li> igual a este-->
+            <ul>
+                <li>
+                    <article>
+                        <img src="/imgs/noticia.jpg" alt="Descrição da imagem">
+                        <div>
+                            <p>Categoria</p>
+                            <time datetime="2026-01-01">00 mês</time>
+                            <h3>Título da notícia</h3>
+                            <p>Resumo da notícia.</p>
+                            <a href="#">Ler notícia</a>
+                        </div>
+                    </article>
+                </li>
+            </ul>
+        </section>
+
+        <!--Próximos encontros e newsletter-->
+        <section>
+            <div>
+                <p>Reserve a data</p>
+                <h2>Próximos encontros</h2>
+
+                <ul>
+                    <li>
+                        <a href="#">
+                            <time datetime="2026-01-01"><strong>00</strong><small>Mês</small></time>
+                            <div>
+                                <h3>Título do encontro</h3>
+                                <p>Local · Hora</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <form method="post">
+                <h2>Novidades na sua caixa de entrada.</h2>
+                <p>Receba nossa curadoria mensal de livros, clubes e eventos.</p>
+                <input type="email" name="email" placeholder="Seu melhor e-mail" aria-label="E-mail" autocomplete="email" required>
+                <button type="submit">Quero receber</button>
+                <small>Sem spam. Apenas boas histórias, uma vez por mês.</small>
+            </form>
+        </section>
     </main>
 
     <!--rodapé-->

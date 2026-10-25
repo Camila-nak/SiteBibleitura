@@ -127,7 +127,214 @@ details li a:hover {
 }
 
 /*main*/
+main > section:nth-child(2) > div:first-child > p,
+main > section:nth-child(3) > header > p {
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--roxo);
+}
 
+/* ===== 1ª seção: topo ===== */
+main > section:first-child {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 72px;
+    align-items: center;
+    min-height: 720px;
+    padding: 90px 48px;
+    color: #fff;
+    background:
+        radial-gradient(circle at 0 0, var(--roxo), transparent 50%),
+        linear-gradient(160deg, var(--indigo), var(--roxo) 130%);
+
+    > div {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        > p:first-child {
+            padding: 8px 18px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, .14);
+            font-weight: 600;
+            font-size: 14px;
+            letter-spacing: .04em;
+            text-transform: uppercase;
+        }
+
+        > p:first-child::before { content: "✦  "; }
+
+        h1 {
+            margin: 24px 0;
+            font-size: clamp(48px, 6vw, 78px);
+        }
+
+        > p:nth-of-type(2) {
+            max-width: 560px;
+            font-size: 19px;
+            line-height: 1.8;
+            color: var(--orquidea);
+        }
+
+        a {
+            margin-top: 36px;
+            padding: 18px 30px;
+            border-radius: 999px;
+            background: #fff;
+            color: var(--indigo);
+            font-weight: 600;
+        }
+
+        a::after { content: "  ›"; }
+        a:hover { background: var(--orquidea); }
+    }
+
+    figure {
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: -26px;
+            left: -26px;
+            width: 120px;
+            height: 120px;
+            border-radius: 28px;
+            background: rgba(255, 255, 255, .12);
+            border: 1px solid rgba(255, 255, 255, .2);
+        }
+
+        img {
+            position: relative;
+            display: block;
+            width: 100%;
+            aspect-ratio: 8 / 7;
+            object-fit: cover;
+            border-radius: 36px;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, .3);
+        }
+
+        /* a legenda em texto repete o alt da imagem */
+        > p { display: none; }
+
+        figcaption {
+            position: absolute;
+            left: -26px;
+            bottom: -26px;
+            padding: 22px 26px;
+            border-radius: 22px;
+            background: var(--destaque);
+            color: var(--indigo);
+            font-weight: 600;
+            font-size: 14px;
+            letter-spacing: .03em;
+            text-transform: uppercase;
+        }
+
+        figcaption strong {
+            display: block;
+            font: 700 28px var(--serif);
+            text-transform: none;
+        }
+    }
+}
+
+/* ===== 2ª seção: como tudo começou ===== */
+main > section:nth-child(2) {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 64px;
+    padding: 90px 48px;
+
+    > div:first-child h2 {
+        margin-top: 12px;
+        font-size: clamp(34px, 3.8vw, 50px);
+        line-height: 1.2;
+    }
+
+    > div:last-child {
+        h2 {
+            margin: 36px 0 12px;
+            font-size: 28px;
+        }
+
+        h2:first-child { margin-top: 0; }
+
+        p {
+            font-size: 18px;
+            line-height: 1.95;
+            color: color-mix(in srgb, var(--texto) 72%, var(--fundo));
+        }
+
+        br { display: none; }
+    }
+
+    strong { font-weight: 600; color: var(--texto); }
+}
+
+/* ===== 3ª seção: o que nos move ===== */
+main > section:nth-child(3) {
+    padding: 90px 48px;
+    background: color-mix(in srgb, var(--orquidea) 55%, var(--fundo));
+
+    header { text-align: center; }
+
+    h2 {
+        max-width: 640px;
+        margin: 12px auto 0;
+        font-size: clamp(34px, 3.8vw, 50px);
+        line-height: 1.2;
+    }
+
+    ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        margin-top: 56px;
+    }
+
+    li {
+        padding: 36px;
+        border-radius: 32px;
+        background: #fff;
+        box-shadow: 0 18px 40px color-mix(in srgb, var(--roxo) 14%, transparent);
+    }
+
+    /* quadrado roxo com o ícone desenhado só com CSS */
+    li::before {
+        content: "";
+        display: block;
+        width: 60px;
+        height: 60px;
+        border-radius: 18px;
+        background-color: var(--roxo);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 28px;
+    }
+
+    li:nth-child(1)::before {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20'/%3E%3C/svg%3E");
+    }
+
+    li:nth-child(2)::before {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='9' cy='7' r='4'/%3E%3Cpath d='M2 21v-2a4 4 0 0 1 4-4h6a4 4 0 0 1 4 4v2M16 3.13a4 4 0 0 1 0 7.75M22 21v-2a4 4 0 0 0-3-3.87'/%3E%3C/svg%3E");
+    }
+
+    li:nth-child(3)::before {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z'/%3E%3C/svg%3E");
+    }
+
+    h3 { margin: 28px 0 10px; font-size: 26px; }
+
+    li p {
+        font-size: 17px;
+        line-height: 1.7;
+        color: color-mix(in srgb, var(--texto) 72%, #fff);
+    }
+}
 
 /*footer*/
 body > footer {
