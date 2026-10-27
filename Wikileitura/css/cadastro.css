@@ -1,16 +1,16 @@
 /*Fonte*/
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap');
 
-/*Cores da tela*/
+/*cores da tela*/
 :root {
-    --fundo: #0d0820;
-    --painel: #150d2b;
-    --campo: #1a1233;
-    --borda: #2d2250;
-    --rosa: #e0609f;
-    --azul: #5b8def;
-    --lilas: #8e7bc4;
-    --texto: #f1ebff;
+    --fundo: #f6f8ee;      /* creme esverdeado bem claro */
+    --painel: #ffffff;     /* card do login */
+    --campo: #eef4e4;      /* fundo dos inputs */
+    --borda: #cfe3c8;      /* bordas suaves */
+    --rosa: #8fd19e;       /* verde-bandeira pastel (destaque principal) */
+    --azul: #a9cfe8;       /* azul-céu pastel */
+    --lilas: #f3d97a;      /* amarelo-ouro pastel */
+    --texto: #1f4a5e;      /* azul-petróleo escuro */
     --serif: 'Playfair Display', Georgia, serif;
     --sans: 'Inter', system-ui, sans-serif;
 }

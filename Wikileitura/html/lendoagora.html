@@ -24,7 +24,7 @@
                             <li><a href="/Wikileitura/html/minhaestante.html">Minha estante</a></li>
                             <li><a href="/Wikileitura/html/lendoagora.html">Lendo agora</a></li>
                             <li><a href="/Wikileitura/html/historico.html">Histórico</a></li>
-                            <li><a href="/Wikileitura/html/clubeleitura.html">Clude de leitura</a></li>
+                            <li><a href="/Wikileitura/html/clubeleitura.html">Clube de leitura</a></li>
                         </ul>
                     </details>
                 </li>
@@ -39,7 +39,66 @@
 
     <!--corpo do site-->
     <main>
+        <!--Título e ritmo do mês-->
+        <header>
+            <div>
+                <p>Entre páginas</p>
+                <h1>Lendo agora</h1>
+                <p>Continue de onde parou e mantenha vivas as histórias brasileiras que estão acompanhando seus dias.</p>
+            </div>
 
+            <aside>
+                <small>Ritmo deste mês</small>
+                <strong>0 páginas</strong>
+            </aside>
+        </header>
+
+        <!--Leitura mais recente-->
+        <section>
+            <article>
+                <figure>
+                    <small>Nome autor</small>
+                    <strong>Nome livro</strong>
+                </figure>
+
+                <div>
+                    <p>Sua leitura mais recente</p>
+                    <h2>Que tal mais um capítulo?</h2>
+                    <p>Você parou na página 0. Faltam aproximadamente 0h00 para concluir esta história.</p>
+                    <p><span>Página 0 de 0</span> <output>0%</output></p>
+                    <progress value="0" max="100">0%</progress>
+                    <a href="#">Continuar leitura</a>
+                </div>
+            </article>
+        </section>
+
+        <!--Filtros por status e total-->
+        <nav aria-label="Filtrar por status">
+            <ul>
+                <li><a href="#">Todos <small>0</small></a></li>
+                <li><a href="#" aria-current="page">Lendo agora <small>0</small></a></li>
+                <li><a href="#">Quero ler <small>0</small></a></li>
+                <li><a href="#">Já li <small>0</small></a></li>
+            </ul>
+            <p>0 livros</p>
+        </nav>
+
+        <!--Exemplo: cada livro do banco vira um <li> igual a este-->
+        <ul>
+            <li>
+                <a href="#">
+                    <figure>
+                        <small>Autor</small>
+                        <strong>Nome livro</strong>
+                    </figure>
+                    <p>Lendo agora</p>
+                    <h3>Nome livro</h3>
+                    <p>Nome autor completo</p>
+                    <progress value="0" max="100">0%</progress>
+                    <small>0% lido</small>
+                </a>
+            </li>
+        </ul>
     </main>
 
     <!--rodapé-->

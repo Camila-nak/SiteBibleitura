@@ -1,12 +1,15 @@
-/*cores do site*/
+/*Fonte para o site*/
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,500&display=swap');
+
+/*Cores utilizadas no site*/
 :root{
-    --fundo: #f4f0fa;      /* lavanda bem clara */
-    --roxo: #5b2a8c;       /* roxo principal */
-    --indigo: #2a1654;     /* roxo escuro */
-    --lilas: #b79ae0;      /* lilás */
-    --orquidea: #d9c4f2;   /* lilás claro */
-    --destaque: #f2c94c;   /* amarelo de contraste */
-    --texto: #221a33;
+    --fundo: #f6f8ee;      /* creme esverdeado bem claro */
+    --roxo: #8fd19e;       /* verde-bandeira pastel (cor principal) */
+    --indigo: #4f8a6b;     /* verde floresta suave (versão escura) */
+    --lilas: #f3d97a;      /* amarelo-ouro pastel */
+    --orquidea: #a9cfe8;   /* azul-céu pastel */
+    --destaque: #ffffff;   /* branco para contraste */
+    --texto: #1f4a5e;      /* azul-petróleo escuro */
     --serif: 'Newsreader', Georgia, serif;
     --sans: 'DM Sans', system-ui, sans-serif;
 }

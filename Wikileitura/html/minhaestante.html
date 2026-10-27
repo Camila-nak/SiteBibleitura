@@ -24,7 +24,7 @@
                             <li><a href="/Wikileitura/html/minhaestante.html">Minha estante</a></li>
                             <li><a href="/Wikileitura/html/lendoagora.html">Lendo agora</a></li>
                             <li><a href="/Wikileitura/html/historico.html">Histórico</a></li>
-                            <li><a href="/Wikileitura/html/clubeleitura.html">Clude de leitura</a></li>
+                            <li><a href="/Wikileitura/html/clubeleitura.html">Clube de leitura</a></li>
                         </ul>
                     </details>
                 </li>
@@ -39,7 +39,44 @@
 
     <!--corpo do site-->
     <main>
+        <header>
+            <div>
+                <p>Sua biblioteca pessoal</p>
+                <h1>Minha estante</h1>
+                <p>Histórias brasileiras que estão com você — as que já marcaram, as que acompanham e as próximas da fila.</p>
+            </div>
+            <a href="#">Adicionar livro</a>
+        </header>
 
+        <!--Filtros por status e total-->
+        <nav aria-label="Filtrar por status">
+            <ul>
+                <li><a href="#" aria-current="page">Todos <small>0</small></a></li>
+                <li><a href="#">Lendo agora <small>0</small></a></li>
+                <li><a href="#">Quero ler <small>0</small></a></li>
+                <li><a href="#">Já li <small>0</small></a></li>
+            </ul>
+            <p>0 livros</p>
+        </nav>
+
+        <!--Exemplo: cada livro do banco vira um <li> igual a este-->
+        <ul>
+            <li>
+                <a href="#">
+                    <figure>
+                        <small>Autor</small>
+                        <strong>Nome livro</strong>
+                    </figure>
+                    <p>Status</p>
+                    <h3>Nome livro</h3>
+                    <p>Nome autor completo</p>
+
+                    <!--Só aparece nos livros "Lendo agora"-->
+                    <progress value="0" max="100">0%</progress>
+                    <small>0% lido</small>
+                </a>
+            </li>
+        </ul>
     </main>
 
     <!--rodapé-->
