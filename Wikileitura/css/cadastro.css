@@ -50,8 +50,7 @@ main > aside:first-child {
     flex-direction: column;
     padding: 48px 56px;
     background:
-        linear-gradient(180deg, transparent 20%, var(--fundo) 75%),
-        linear-gradient(135deg, #7a2a5c, #3a1d6e 55%, #1a0f3a);
+        linear-gradient(135deg, #093cc9, #c4c703 55%, #075628);
 
     /* logo */
     > p:first-child {
@@ -104,7 +103,7 @@ main > aside:first-child {
         font: 11px var(--serif);
         letter-spacing: .12em;
         text-transform: uppercase;
-        color: #a98be8;
+        color: #05038c;
     }
 }
 
